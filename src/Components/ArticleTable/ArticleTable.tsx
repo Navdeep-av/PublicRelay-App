@@ -8,7 +8,7 @@ import {
   TableRow,
   TableHeadCell,
   TableCell,
-  RightAlignedCell
+  RightAlignedCell, ImpressionsHeadCell, TableHeadingRow
 } from "./ArticleTable.styles";
 import type { Article, SortConfig } from "../../types/article";
 import type { FC } from "react";
@@ -33,12 +33,12 @@ const ArticleTable: FC<ArticleTableProps> = ({ articles, setSortConfig }) => {
       <TableContainer>
         <StyledTable>
           <TableHead>
-            <TableRow>
+            <TableHeadingRow>
               <TableHeadCell>Date</TableHeadCell>
               <TableHeadCell onClick={() => handleSort("articleTitle")}>Title</TableHeadCell>
               <TableHeadCell onClick={() => handleSort("articleOutlet")}>Outlet</TableHeadCell>
-              <TableHeadCell className="text-right">Impressions</TableHeadCell>
-            </TableRow>
+              <ImpressionsHeadCell className="text-right">Impressions</ImpressionsHeadCell>
+            </TableHeadingRow>
           </TableHead>
           <TableBody>
             {articles?.length > 0 &&

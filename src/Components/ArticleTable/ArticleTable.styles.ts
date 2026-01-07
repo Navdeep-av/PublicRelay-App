@@ -31,8 +31,21 @@ export const TableRow = styled.tr`
   }
 `;
 
+export const TableHeadingRow = styled.tr`
+  height: 40px;
+  background-color: #fff;
+`;
+
 export const TableHeadCell = styled.th`
   text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  cursor: pointer;
+`;
+
+export const ImpressionsHeadCell = styled.th`
+  text-align: right;
   padding: 12px;
   border-bottom: 1px solid #ccc;
   color: #333;
